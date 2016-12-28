@@ -9,13 +9,15 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.snalopainen.stackview.R;
+import com.snalopainen.stackview.bus.RxBus;
+import com.snalopainen.stackview.bus.events.StackCardMovedEvent;
 import com.snalopainen.stackview.utilites.DisplayUtility;
 
 /**
  * Created by snajdan on 2016/12/27.
  */
 
-public class StackCardView extends FrameLayout implements View.OnTouchListener{
+public class StackCardView extends FrameLayout implements View.OnTouchListener {
 
     private static final float CARD_ROTATION_DEGREES = 40.0f;
     private static final float BADGE_ROTATION_DEGREES = 15.0f;
@@ -70,8 +72,48 @@ public class StackCardView extends FrameLayout implements View.OnTouchListener{
         setOnTouchListener(this);
     }
 
+
+    private float oldX;
+    private float oldY;
+    private float newX;
+    private float newY;
+    private float dx;
+    private float dy;
+
     @Override
     public boolean onTouch(View view, MotionEvent motionEvent) {
+
+        switch (motionEvent.getAction()) {
+            case MotionEvent.ACTION_DOWN:
+                oldX = motionEvent.getX();
+                oldY = motionEvent.getY();
+                break;
+            case MotionEvent.ACTION_MOVE:
+                newX = motionEvent.getX();
+                newY = motionEvent.getY();
+                dx = newX - oldX;
+                dy = newY - oldY;
+
+                float posX = view.getX() + dx;
+                RxBus.getInstance().send(new StackCardMovedEvent(posX));
+                view.setX(view.getX() + dx);
+                view.setY(view.getY() + dy);
+                break;
+            case MotionEvent.ACTION_UP:
+                break;
+
+        }
         return false;
+    }
+    private static final float CARD_ROTATION_DEGREES = 40.0f;
+    private void setCardRotation(View view, float posX) {
+        float rationDegree = posX*CARD_ROTATION_DEGREES/screenWidth;
+
+    }
+
+    private void updateBadgesAlpha(float posX) {
+        float alpha = (posX - padding) / (screenWidth * 0.5f);
+        likeTextView.setAlpha(alpha);
+        nopeTextView.setAlpha(alpha);
     }
 }
