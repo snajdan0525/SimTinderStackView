@@ -31,6 +31,7 @@ public class StackCardLayout extends FrameLayout {
     private int yCardoffset;//每一个层叠的stackView位移差
     private CompositeSubscription compositeSubscription;
     private PublishSubject<Integer> publishSubject = PublishSubject.create();
+
     public StackCardLayout(Context context) {
         super(context);
     }
@@ -84,6 +85,10 @@ public class StackCardLayout extends FrameLayout {
         compositeSubscription.add(rxSubscription);
     }
 
+    public PublishSubject<Integer> getPublishSubject() {
+        return publishSubject;
+    }
+
     public void addCard(StackCardView scv) {
         ViewGroup.LayoutParams layoutParams = new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
         int childCount = getChildCount();
@@ -98,6 +103,7 @@ public class StackCardLayout extends FrameLayout {
                 .setInterpolator(new AnticipateOvershootInterpolator())
                 .setDuration(ANIMATION_DURATION);
     }
+
     @Override
     public void addView(View child, int index, ViewGroup.LayoutParams params) {
         super.addView(child, index, params);

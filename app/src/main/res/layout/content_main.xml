@@ -13,8 +13,17 @@
     tools:context="com.snalopainen.stackview.activity.MainActivity"
     tools:showIn="@layout/app_bar_main">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/grey_200"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+        <com.snalopainen.stackview.ui.StackCardLayout
+            android:id="@+id/tsl"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
 </RelativeLayout>

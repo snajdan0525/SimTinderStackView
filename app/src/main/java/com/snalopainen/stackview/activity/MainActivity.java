@@ -3,6 +3,7 @@ package com.snalopainen.stackview.activity;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.util.Log;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -14,9 +15,22 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import com.snalopainen.stackview.R;
+import com.snalopainen.stackview.models.User;
+import com.snalopainen.stackview.ui.StackCardLayout;
+import com.snalopainen.stackview.ui.StackCardView;
+
+import rx.Subscriber;
+import rx.android.schedulers.AndroidSchedulers;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+    private static final int STACK_SIZE = 4;
+    private String[] displayNames;
+    private String[] userNames;
+    private String[] avatarUrls;
+    private int posvit;
+
+    private StackCardLayout stackCardLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,6 +56,51 @@ public class MainActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        displayNames = getResources().getStringArray(R.array.display_names);
+        userNames = getResources().getStringArray(R.array.usernames);
+        avatarUrls = getResources().getStringArray(R.array.avatar_urls);
+        stackCardLayout = (StackCardLayout) findViewById(R.id.tsl);
+        StackCardView scv;
+        for (posvit = 0; posvit < STACK_SIZE; posvit++) {
+            scv = new StackCardView(this);
+            User user = new User();
+            user.setAvatarUrl(avatarUrls[posvit]);
+            user.setDisplayName(displayNames[posvit]);
+            Log.i("DisplayName",displayNames[posvit]);
+            user.setUsername(userNames[posvit]);
+            scv.bind(user);
+            stackCardLayout.addCard(scv);
+        }
+        stackCardLayout.getPublishSubject()
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribe(new Subscriber<Integer>() {
+                    @Override
+                    public void onCompleted() {
+
+                    }
+
+                    @Override
+                    public void onError(Throwable e) {
+
+                    }
+
+                    @Override
+                    public void onNext(Integer integer) {
+                        if( integer == 1){
+                            StackCardView scv;
+                            for( int i = posvit ; posvit < i+STACK_SIZE-1 ; posvit++ ){
+                                scv = new StackCardView(MainActivity.this);
+                                User user = new User();
+                                user.setAvatarUrl(avatarUrls[posvit]);
+                                user.setDisplayName(displayNames[posvit]);
+                                user.setUsername(userNames[posvit]);
+                                scv.bind(user);
+                                stackCardLayout.addCard(scv);
+                            }
+                        }
+                    }
+                });
     }
 
     @Override
