@@ -3,99 +3,105 @@
 
 
     <array name="display_names">
-        <item>Megan Fox</item>
-        <item>Olivia Wilde</item>
-        <item>Jennifer Lawrence</item>
-        <item>Jessica Alba</item>
-        <item>Leighton Meester</item>
-        <item>Hayden Panettiere</item>
-        <item>Ashley Tisdale</item>
-        <item>Aida Yespica</item>
-        <item>Adriana Lima</item>
-        <item>Alessandra Ambrosio</item>
-        <item>Candice Swanepoel</item>
-        <item>Jessica Gomes</item>
-        <item>Genevieve Morton</item>
-        <item>Petra Nemcova</item>
-        <item>Lily Aldridge</item>
-        <item>Kate Upton</item>
-        <item>Gigi Hadid</item>
-        <item>Michelle Keegan</item>
-        <item>Katherine Webb</item>
-        <item>Scarlett Johansson</item>
-        <item>Katharine McPhee</item>
-        <item>Lucy Pinder</item>
-        <item>Miranda Kerr</item>
+        <item>Who’s There?</item>
+        <item>Bioluminous Larak</item>
+        <item>Fox Found</item>
+        <item>Cracking the Surface</item>
+        <item>The Village</item>
+        <item>When Penguins Attack</item>
+        <item>Big Baby</item>
+        <item>Something’s Fishy</item>
+        <item>Hull-o</item>
+        <item>Against the Wind</item>
+        <item>Falls in Autumn</item>
+        <item>Yellow Jellies</item>
+        <item>Shining Through</item>
+        <item>All the Fish in the Sea</item>
+        <item>Dancing With the Moon</item>
+        <item>Imperial Blossoms</item>
+        <item>Mother of the Forest</item>
+        <item>Kit Friendly</item>
+        <item>Winter White</item>
+        <item>Bird Feeders</item>
     </array>
 
-    <array name="usernames">
-        <item>\@meganfox</item>
-        <item>\@oliviawilde</item>
-        <item>\@Jennifer_Lawrence</item>
-        <item>\@jessicaalba</item>
-        <item>\@itsmeleighton</item>
-        <item>\@haydenpanettier</item>
-        <item>\@ashleytisdale</item>
-        <item>\@AidaYespica</item>
-        <item>\@AdrianaLima</item>
-        <item>\@AngelAlessandra</item>
-        <item>\@angelcandice</item>
-        <item>\@iamjessicagomes</item>
-        <item>\@genevievemorton</item>
-        <item>\@pnemcova</item>
-        <item>\@LilyAldridge</item>
-        <item>\@KateUpton</item>
-        <item>\@GiGiHadid</item>
-        <item>\@michkeegan</item>
-        <item>\@_KatherineWebb</item>
-        <item>\@ScarlettJ</item>
-        <item>\@katharinemcphee</item>
-        <item>\@LucyPinder</item>
-        <item>\@MirandaKerr</item>
+    <array name="ch_descriptions">
+        <item>怯懦与试探</item>
+        <item>人与自然的对望</item>
+        <item>隐藏或隐现</item>
+        <item>美妙的开裂</item>
+        <item>雾中村庄渐现</item>
+        <item>幼小的怒气</item>
+        <item>它，可爱而巨大</item>
+        <item>到湖里撒欢</item>
+        <item>寻找，疯狂的潜水员</item>
+        <item>与风斗，其乐无穷</item>
+        <item>秋，红叶之魅</item>
+        <item>如精灵绕身</item>
+        <item>光，亮</item>
+        <item>偶遇，鱼的海洋</item>
+        <item>与柔月共舞</item>
+        <item>如入花都</item>
+        <item>森林母亲的凝望</item>
+        <item>娇萌的小可爱</item>
+        <item>冬日之白</item>
+        <item>鸬鹚捕鱼，动静间显身手</item>
     </array>
 
-    <array name="avatar_urls">
+    <array name="image_urls">
+        <item>http://photocdn.sohu.com/20151222/mp49954521_1450777334142_2.jpeg</item>
+        <item>http://photocdn.sohu.com/20151222/mp49954521_1450777334142_3.jpeg</item>
+        <item>http://photocdn.sohu.com/20151222/mp49954521_1450777334142_4.jpeg</item>
         <item>
-            http://images-cdn.moviepilot.com/image/upload/v1426594796/megan-fox-pictures-megan-fox-is-so-tired-of-being-an-actress-and-a-mom-jpeg-86591.jpg
-        </item>
-        <item>http://itsybitsysteps.com/wp-content/uploads/2013/10/olivia-wilde.jpg</item>
-        <item>
-            http://img4.wikia.nocookie.net/__cb20120224061953/xmenmovies/images/c/cf/Jennifer-Lawrence.jpg
-        </item>
-        <item>http://cdn.modernfarmer.com/wp-content/uploads/2014/10/Jessica-Alba-3.jpg</item>
-        <item>
-            http://2.bp.blogspot.com/-KKccgaeEuzo/U72z9iDdJTI/AAAAAAAAAJ0/ikXRojD29nA/s1600/leighton-meester.png
+            http://photocdn.sohu.com/20151222/mp49954521_1450777334142_5.jpeg
         </item>
         <item>
-            http://assets-s3.usmagazine.com/uploads/assets/celebrities/5570-hayden-panettiere/1351182452_hayden-panettiere-290.jpg
+            http://photocdn.sohu.com/20151222/mp49954521_1450777334142_6.jpeg
         </item>
         <item>
-            https://s-media-cache-ak0.pinimg.com/originals/0b/b3/70/0bb3704734e0a535ec846772f7d28be7.jpg
-        </item>
-        <item>http://www.eventienonsolo.it/wp-content/uploads/2012/05/Aida_Yespica.jpg</item>
-        <item>http://i1.top.de/024/201024,pd_1/adriana-lima.jpg</item>
-        <item>
-            http://cdn-img.instyle.com/sites/default/files/styles/684xflex/public/images/2015/10/102815-alessandra-ambrosio-lead.jpg?itok=uRVvt-Ne
-        </item>
-        <item>http://images.askmen.com/candice-swanepoel/picture-1-135249430024.jpg</item>
-        <item>http://www3.pictures.zimbio.com/bg/Jessica+Gomes+JEHStjT_sgtm.jpg</item>
-        <item>
-            http://www.celebzz.com/wp-content/uploads/2014/01/genevieve-morton-at-2013-sports-illustrated-swimsuit-launch-party-_1.jpg
-        </item>
-        <item>http://www.theplace2.ru/archive/petra_nemcova/img/petra-nemcova-1920x1200-27155.jpg
-        </item>
-        <item>http://i.perezhilton.com/wp-content/uploads/2014/03/lily-aldridge.gif</item>
-        <item>http://i.huffpost.com/gen/1245823/thumbs/o-KATE-UPTON-facebook.jpg</item>
-        <item>http://fullhdpictures.com/wp-content/uploads/2016/04/Gigi-Hadid-HD-Photos.jpg</item>
-        <item>http://i1.cdnds.net/13/25/300x450/showbiz-michelle-keegan.jpg</item>
-        <item>http://www.rantsports.com/clubhouse/files/2014/03/10-instagram.jpg</item>
-        <item>http://si.wsj.net/public/resources/images/BN-BY925_mag041_OZ_20140318165119.jpg</item>
-        <item>http://img2.timeinc.net/people/i/2008/database/katherinemcphee/katmcphee300.jpg</item>
-        <item>
-            http://thefinereport.com/wp-content/uploads/2012/05/459090-lucy_pinder_nuts_magazine_18_03_2011_in_nuts_office_with_nutsmanreg_3_3063.jpg
+            http://photocdn.sohu.com/20151222/mp49954521_1450777334142_7.jpeg
         </item>
         <item>
-            http://greenorganics.com.au/organic-natural-skin-care-products/wp-content/images/miranda-kerr-skin-care-secrets.jpg
+            http://photocdn.sohu.com/20151222/mp49954521_1450777334142_8.jpeg
+        </item>
+        <item>
+            http://photocdn.sohu.com/20151222/mp49954521_1450777334142_9.jpeg
+        </item>
+        <item>
+            http://photocdn.sohu.com/20151222/mp49954521_1450777334142_10.jpeg
+        </item>
+        <item>
+            http://photocdn.sohu.com/20151222/mp49954521_1450777334142_11.jpeg
+        </item>
+        <item>
+            http://photocdn.sohu.com/20151222/mp49954521_1450777334142_12.jpeg
+        </item>
+        <item>
+            http://photocdn.sohu.com/20151222/mp49954521_1450777334142_13.jpeg
+        </item>
+        <item>
+            http://photocdn.sohu.com/20151222/mp49954521_1450777334142_14.jpeg
+        </item>
+        <item>
+            http://photocdn.sohu.com/20151222/mp49954521_1450777334142_15.jpeg
+        </item>
+        <item>
+            http://photocdn.sohu.com/20151222/mp49954521_1450777334142_16.jpeg
+        </item>
+        <item>
+            http://photocdn.sohu.com/20151222/mp49954521_1450777334142_17.jpeg
+        </item>
+        <item>
+            http://photocdn.sohu.com/20151222/mp49954521_1450777334142_18.jpeg
+        </item>
+        <item>
+            http://photocdn.sohu.com/20151222/mp49954521_1450777334142_19.jpeg
+        </item>
+        <item>
+            http://photocdn.sohu.com/20151222/mp49954521_1450777334142_20.jpeg
+        </item>
+        <item>
+            http://photocdn.sohu.com/20151222/mp49954521_1450777334142_21.jpeg
         </item>
     </array>
 </resources>

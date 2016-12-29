@@ -26,8 +26,8 @@ public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
     private static final int STACK_SIZE = 4;
     private String[] displayNames;
-    private String[] userNames;
-    private String[] avatarUrls;
+    private String[] ch_descriptions;
+    private String[] image_urls;
     private int posvit;
 
     private SimTinderStackCardLayout stackCardLayout;
@@ -58,17 +58,17 @@ public class MainActivity extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
 
         displayNames = getResources().getStringArray(R.array.display_names);
-        userNames = getResources().getStringArray(R.array.usernames);
-        avatarUrls = getResources().getStringArray(R.array.avatar_urls);
+        ch_descriptions = getResources().getStringArray(R.array.ch_descriptions);
+        image_urls = getResources().getStringArray(R.array.image_urls);
         stackCardLayout = (SimTinderStackCardLayout) findViewById(R.id.tsl);
         SimTinderStackCardView scv;
         for (posvit = 0; posvit < STACK_SIZE; posvit++) {
             scv = new SimTinderStackCardView(this);
             User user = new User();
-            user.setAvatarUrl(avatarUrls[posvit]);
+            user.setAvatarUrl(image_urls[posvit]);
             user.setDisplayName(displayNames[posvit]);
             Log.i("DisplayName",displayNames[posvit]);
-            user.setUsername(userNames[posvit]);
+            user.setUsername(ch_descriptions[posvit]);
             scv.bind(user);
             stackCardLayout.addCard(scv);
         }
@@ -92,9 +92,9 @@ public class MainActivity extends AppCompatActivity
                             for( int i = posvit ; posvit < i+STACK_SIZE-1 ; posvit++ ){
                                 scv = new SimTinderStackCardView(MainActivity.this);
                                 User user = new User();
-                                user.setAvatarUrl(avatarUrls[posvit]);
+                                user.setAvatarUrl(image_urls[posvit]);
                                 user.setDisplayName(displayNames[posvit]);
-                                user.setUsername(userNames[posvit]);
+                                user.setUsername(ch_descriptions[posvit]);
                                 scv.bind(user);
                                 stackCardLayout.addCard(scv);
                             }
