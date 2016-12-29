@@ -34,14 +34,17 @@ public class StackCardLayout extends FrameLayout {
 
     public StackCardLayout(Context context) {
         super(context);
+        init();
     }
 
     public StackCardLayout(Context context, AttributeSet attrs) {
         super(context, attrs);
+        init();
     }
 
     public StackCardLayout(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
+        init();
     }
 
 
@@ -90,7 +93,8 @@ public class StackCardLayout extends FrameLayout {
     }
 
     public void addCard(StackCardView scv) {
-        ViewGroup.LayoutParams layoutParams = new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+        ViewGroup.LayoutParams layoutParams =
+                new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
         int childCount = getChildCount();
         addView(scv, 0, layoutParams);
 
