@@ -114,10 +114,12 @@ public class StackCardView extends FrameLayout implements View.OnTouchListener {
             case MotionEvent.ACTION_UP:
                 if (isBeyondLeftBoundary(view)) {
                     //dismiss掉最顶层的card
-                    dismissStackCard(view, -screenWidth / 2);
+                    RxBus.getInstance().send(new StackCardMovedEvent(-(screenWidth)));
+                    dismissStackCard(view, -screenWidth * 2);
                 } else if (isBeyondRightBoundary(view)) {
                     //dismiss掉最顶层的card
-                    dismissStackCard(view, screenWidth / 2);
+                    RxBus.getInstance().send(new StackCardMovedEvent(screenWidth));
+                    dismissStackCard(view, screenWidth * 2);
                 } else {
                     //复原card的位置
                     resetStackCardPos(view);
@@ -132,7 +134,7 @@ public class StackCardView extends FrameLayout implements View.OnTouchListener {
         view.animate()
                 .x(0)
                 .y(0)
-                .setDuration(0)
+                .setDuration(DURATION)
                 .setInterpolator(new OvershootInterpolator())
                 .rotation(0);
         likeTextView.setAlpha(0);
@@ -199,7 +201,7 @@ public class StackCardView extends FrameLayout implements View.OnTouchListener {
     private void updateBadgesAlpha(float posX) {
         float alpha = (posX - padding) / (screenWidth * 0.5f);
         likeTextView.setAlpha(alpha);
-        nopeTextView.setAlpha(alpha);
+        nopeTextView.setAlpha(-alpha);
     }
 
     public void bind(User user) {
