@@ -87,6 +87,7 @@ public class StackCardView extends FrameLayout implements View.OnTouchListener {
             case MotionEvent.ACTION_DOWN:
                 oldX = motionEvent.getX();
                 oldY = motionEvent.getY();
+                view.clearAnimation();
                 break;
             case MotionEvent.ACTION_MOVE:
                 newX = motionEvent.getX();
@@ -98,16 +99,36 @@ public class StackCardView extends FrameLayout implements View.OnTouchListener {
                 RxBus.getInstance().send(new StackCardMovedEvent(posX));
                 view.setX(view.getX() + dx);
                 view.setY(view.getY() + dy);
-                break;
+                setCardRotation(view, view.getX());
+
+                updateBadgesAlpha(posX);
+                return true;
             case MotionEvent.ACTION_UP:
+
                 break;
+            default:
+                return super.onTouchEvent(motionEvent);
 
         }
         return false;
     }
+
+    private void isBeyondLeftBoundary(View view) {
+    }
+
+    private void isBeyondRightBoundary(View view) {
+    }
+
     private static final float CARD_ROTATION_DEGREES = 40.0f;
+
     private void setCardRotation(View view, float posX) {
-        float rationDegree = posX*CARD_ROTATION_DEGREES/screenWidth;
+        float rotation = (CARD_ROTATION_DEGREES * (posX)) / screenWidth;
+        int halfCardHeight = (view.getHeight() / 2);
+        if (oldY < halfCardHeight - (2 * padding)) {
+            view.setRotation(rotation);
+        } else {
+            view.setRotation(-rotation);
+        }
 
     }
 
