@@ -24,13 +24,18 @@ import com.squareup.picasso.Picasso;
  * Created by snajdan on 2016/12/27.
  */
 
-public class StackCardView extends FrameLayout implements View.OnTouchListener {
+public class SimTinderStackCardView extends FrameLayout implements View.OnTouchListener {
 
     private static final float CARD_ROTATION_DEGREES = 40.0f;
     private static final float BADGE_ROTATION_DEGREES = 15.0f;
     private static final int DURATION = 300;
 
-
+    private float oldX;
+    private float oldY;
+    private float newX;
+    private float newY;
+    private float dx;
+    private float dy;
     private ImageView imageView;
     private TextView displayNameTextView;
     private TextView usernameTextView;
@@ -43,17 +48,17 @@ public class StackCardView extends FrameLayout implements View.OnTouchListener {
     private int screenWidth;
     private int padding;
 
-    public StackCardView(Context context) {
+    public SimTinderStackCardView(Context context) {
         super(context);
         init(context, null);
     }
 
-    public StackCardView(Context context, AttributeSet attrs) {
+    public SimTinderStackCardView(Context context, AttributeSet attrs) {
         super(context, attrs);
         init(context, attrs);
     }
 
-    public StackCardView(Context context, AttributeSet attrs, int defStyle) {
+    public SimTinderStackCardView(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
         init(context, attrs);
     }
@@ -78,14 +83,6 @@ public class StackCardView extends FrameLayout implements View.OnTouchListener {
 
         setOnTouchListener(this);
     }
-
-
-    private float oldX;
-    private float oldY;
-    private float newX;
-    private float newY;
-    private float dx;
-    private float dy;
 
     @Override
     public boolean onTouch(View view, MotionEvent motionEvent) {

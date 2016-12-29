@@ -16,8 +16,8 @@ import android.view.MenuItem;
 
 import com.snalopainen.stackview.R;
 import com.snalopainen.stackview.models.User;
-import com.snalopainen.stackview.ui.StackCardLayout;
-import com.snalopainen.stackview.ui.StackCardView;
+import com.snalopainen.stackview.ui.SimTinderStackCardLayout;
+import com.snalopainen.stackview.ui.SimTinderStackCardView;
 
 import rx.Subscriber;
 import rx.android.schedulers.AndroidSchedulers;
@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity
     private String[] avatarUrls;
     private int posvit;
 
-    private StackCardLayout stackCardLayout;
+    private SimTinderStackCardLayout stackCardLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,10 +60,10 @@ public class MainActivity extends AppCompatActivity
         displayNames = getResources().getStringArray(R.array.display_names);
         userNames = getResources().getStringArray(R.array.usernames);
         avatarUrls = getResources().getStringArray(R.array.avatar_urls);
-        stackCardLayout = (StackCardLayout) findViewById(R.id.tsl);
-        StackCardView scv;
+        stackCardLayout = (SimTinderStackCardLayout) findViewById(R.id.tsl);
+        SimTinderStackCardView scv;
         for (posvit = 0; posvit < STACK_SIZE; posvit++) {
-            scv = new StackCardView(this);
+            scv = new SimTinderStackCardView(this);
             User user = new User();
             user.setAvatarUrl(avatarUrls[posvit]);
             user.setDisplayName(displayNames[posvit]);
@@ -88,9 +88,9 @@ public class MainActivity extends AppCompatActivity
                     @Override
                     public void onNext(Integer integer) {
                         if( integer == 1){
-                            StackCardView scv;
+                            SimTinderStackCardView scv;
                             for( int i = posvit ; posvit < i+STACK_SIZE-1 ; posvit++ ){
-                                scv = new StackCardView(MainActivity.this);
+                                scv = new SimTinderStackCardView(MainActivity.this);
                                 User user = new User();
                                 user.setAvatarUrl(avatarUrls[posvit]);
                                 user.setDisplayName(displayNames[posvit]);

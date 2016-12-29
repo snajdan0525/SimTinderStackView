@@ -1,8 +1,6 @@
 package com.snalopainen.stackview.ui;
 
 import android.content.Context;
-import android.support.design.widget.AppBarLayout;
-import android.support.design.widget.BaseTransientBottomBar;
 import android.util.AttributeSet;
 import android.view.View;
 import android.view.ViewGroup;
@@ -24,7 +22,7 @@ import rx.subscriptions.CompositeSubscription;
  * Created by snajdan on 2016/12/28.
  */
 
-public class StackCardLayout extends FrameLayout {
+public class SimTinderStackCardLayout extends FrameLayout {
 
     private static int ANIMATION_DURATION = 300;
     private int screenWidth;
@@ -32,17 +30,17 @@ public class StackCardLayout extends FrameLayout {
     private CompositeSubscription compositeSubscription;
     private PublishSubject<Integer> publishSubject = PublishSubject.create();
 
-    public StackCardLayout(Context context) {
+    public SimTinderStackCardLayout(Context context) {
         super(context);
         init();
     }
 
-    public StackCardLayout(Context context, AttributeSet attrs) {
+    public SimTinderStackCardLayout(Context context, AttributeSet attrs) {
         super(context, attrs);
         init();
     }
 
-    public StackCardLayout(Context context, AttributeSet attrs, int defStyleAttr) {
+    public SimTinderStackCardLayout(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
         init();
     }
@@ -69,7 +67,7 @@ public class StackCardLayout extends FrameLayout {
                             float posX = ((StackCardMovedEvent) o).getPosX();
                             int childCount = getChildCount();
                             for (int i = childCount - 2; i >= 0; i--) {
-                                StackCardView stackCardView = (StackCardView) getChildAt(i);
+                                SimTinderStackCardView stackCardView = (SimTinderStackCardView) getChildAt(i);
                                 if (Math.abs(posX) == (float) screenWidth) {
                                     float scaleValue = 1 - ((childCount - 2 - i) / 50.0f);
                                     stackCardView.animate()
@@ -92,7 +90,7 @@ public class StackCardLayout extends FrameLayout {
         return publishSubject;
     }
 
-    public void addCard(StackCardView scv) {
+    public void addCard(SimTinderStackCardView scv) {
         ViewGroup.LayoutParams layoutParams =
                 new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
         int childCount = getChildCount();
