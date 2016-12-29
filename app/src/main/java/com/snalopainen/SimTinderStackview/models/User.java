@@ -1,4 +1,4 @@
-package com.snalopainen.stackview.models;
+package com.snalopainen.SimTinderStackView.models;
 
 /**
  * Created by snajdan on 2016/12/27.

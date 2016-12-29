@@ -1,4 +1,4 @@
-package com.snalopainen.stackview;
+package com.snalopainen.SimTinderStackView;
 
 import org.junit.Test;
 

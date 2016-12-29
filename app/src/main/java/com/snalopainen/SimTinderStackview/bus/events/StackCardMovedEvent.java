@@ -1,4 +1,4 @@
-package com.snalopainen.stackview.bus.events;
+package com.snalopainen.SimTinderStackView.bus.events;
 
 /**
  * Created by snajdan on 2016/12/28.

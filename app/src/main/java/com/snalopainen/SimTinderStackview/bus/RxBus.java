@@ -1,4 +1,4 @@
-package com.snalopainen.stackview.bus;
+package com.snalopainen.SimTinderStackView.bus;
 
 import rx.Observable;
 import rx.subjects.PublishSubject;

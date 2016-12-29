@@ -1,4 +1,4 @@
-package com.snalopainen.stackview;
+package com.snalopainen.SimTinderStackView;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

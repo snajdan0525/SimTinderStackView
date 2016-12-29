@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/SimTinderStackview.iml" filepath="$PROJECT_DIR$/SimTinderStackview.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/stackview.iml" filepath="$PROJECT_DIR$/stackview.iml" />
     </modules>
   </component>
 </project>

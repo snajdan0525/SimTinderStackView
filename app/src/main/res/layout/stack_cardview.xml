@@ -16,7 +16,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <com.snalopainen.stackview.ui.ConsistentAspectRatioImageView
+            <com.snalopainen.SimTinderStackView.ui.ConsistentAspectRatioImageView
                 android:id="@+id/iv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

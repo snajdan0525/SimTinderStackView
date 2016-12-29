@@ -1,4 +1,4 @@
-package com.snalopainen.stackview.ui;
+package com.snalopainen.SimTinderStackView.ui;
 
 import android.content.Context;
 import android.util.AttributeSet;
@@ -8,9 +8,9 @@ import android.view.animation.AnticipateInterpolator;
 import android.view.animation.AnticipateOvershootInterpolator;
 import android.widget.FrameLayout;
 
-import com.snalopainen.stackview.bus.RxBus;
-import com.snalopainen.stackview.bus.events.StackCardMovedEvent;
-import com.snalopainen.stackview.utilites.DisplayUtility;
+import com.snalopainen.SimTinderStackView.bus.RxBus;
+import com.snalopainen.SimTinderStackView.bus.events.StackCardMovedEvent;
+import com.snalopainen.SimTinderStackView.utilites.DisplayUtility;
 
 import rx.Subscription;
 import rx.android.schedulers.AndroidSchedulers;

@@ -1,4 +1,4 @@
-package com.snalopainen.stackview.activity;
+package com.snalopainen.SimTinderStackView.activity;
 
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -14,10 +14,10 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
-import com.snalopainen.stackview.R;
-import com.snalopainen.stackview.models.User;
-import com.snalopainen.stackview.ui.SimTinderStackCardLayout;
-import com.snalopainen.stackview.ui.SimTinderStackCardView;
+import com.snalopainen.SimTinderStackView.R;
+import com.snalopainen.SimTinderStackView.models.User;
+import com.snalopainen.SimTinderStackView.ui.SimTinderStackCardLayout;
+import com.snalopainen.SimTinderStackView.ui.SimTinderStackCardView;
 
 import rx.Subscriber;
 import rx.android.schedulers.AndroidSchedulers;

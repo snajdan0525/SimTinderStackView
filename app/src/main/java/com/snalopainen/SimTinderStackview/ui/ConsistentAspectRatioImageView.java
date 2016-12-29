@@ -1,10 +1,10 @@
-package com.snalopainen.stackview.ui;
+package com.snalopainen.SimTinderStackView.ui;
 
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.util.AttributeSet;
 import android.widget.ImageView;
-import com.snalopainen.stackview.R;
+import com.snalopainen.SimTinderStackView.R;
 /**
  * Created by snajdan on 2016/12/28.
  */
